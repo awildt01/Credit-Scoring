@@ -89,14 +89,6 @@ Die **Lösungspipeline** basiert auf dem CRISP-DM-Framework:
 - Statistik
 - Datenbereinigung, -manipulation, -visualisierung und -exploration
 
-# 5. Project Structure
-- **Artifacts:** Contains the machine learning models artifacts, such as the pkl files.
-- **Input:** Contains the raw input data and data dictionary.
-- **Notebooks:** Contains all jupyter notebooks developed. It is the research environment
-- **Reports:** Contains images for storytelling.
-- **Src:** Contains python scripts including eda and modeling utils, exception and logger.
-- **Requirements.txt** and **setup.py** are tools to build my project as a package.
-
 # 5. Projektstruktur
 - Artifacts: Enthält die Artefakte der Machine-Learning-Modelle, wie z. B. die .pkl-Dateien.
 - Input: Enthält die Rohdaten und das Datenwörterbuch.
@@ -117,6 +109,19 @@ Lending Club's current investment portfolio presents the following characteristi
 - The reason for taking out 80% of the loans is to either consolidate debt or use them for credit card payments.
 - Over 15% live in California.
 - Everything pointed out above suggests a conservative profile among applicants: older individuals with financial and professional stability.
+
+* 6. Zentrale Erkenntnisse zum Kreditrisiko
+Das aktuelle Anlageportfolio von Lending Club weist die folgenden Merkmale auf:
+
+** 6.1 Persönliche Indikatoren:
+- Ungefähr 12 % der Kreditnehmer sind Zahlungsausfälle/schlechte Kreditnehmer.
+- Fast drei von vier Krediten haben eine Laufzeit von 36 Monaten.
+- Mehr als 75 % der Kreditnehmer haben mindestens 2 Jahre Berufserfahrung, wobei über 30 % zehn Jahre oder mehr Erfahrung haben.
+- Über 90 % besitzen ein Haus durch eine Hypothek oder zahlen Miete, während nur 8,5 % ihr Haus vollständig besitzen.
+- Fast 90 % der Kreditnehmer haben Bonitätsnoten zwischen A und D, während F- und G-Noten weniger als 4 % ausmachen.
+- Der Grund für 80 % der aufgenommenen Kredite ist entweder die Schuldenkonsolidierung oder die Bezahlung von Kreditkartenschulden.
+- Über 15 % der Kreditnehmer wohnen in Kalifornien.
+- Die oben genannten Punkte deuten darauf hin, dass die Antragsteller ein konservatives Profil haben: ältere Personen mit finanzieller und beruflicher Stabilität.
 
 <img src="reports/default_rate.png">
 

@@ -40,14 +40,14 @@
 
 
 **2.1 Was ist der Lending Club?**
-LendingClub ist eine Peer-to-Peer-Kreditplattform, die es Privatpersonen ermöglicht, direkt Geld zu verleihen und zu leihen, ohne traditionelle Finanzinstitute wie Banken einzubeziehen. Die Plattform fungiert als Online-Marktplatz, der Kreditnehmer, die einen Kredit benötigen, mit Investoren verbindet, die bereit sind, diese Kredite zu finanzieren.
+- LendingClub ist eine Peer-to-Peer-Kreditplattform, die es Privatpersonen ermöglicht, direkt Geld zu verleihen und zu leihen, ohne traditionelle Finanzinstitute wie Banken einzubeziehen. Die Plattform fungiert als Online-Marktplatz, der Kreditnehmer, die einen Kredit benötigen, mit Investoren verbindet, die bereit sind, diese Kredite zu finanzieren.
 
 **2.2 Was ist das geschäftliche Problem?**
-LendingClub steht vor der Herausforderung, Zahlungsausfallrisiken effektiv zu managen, während gleichzeitig die Renditen für Investoren optimiert werden. Da die Plattform Peer-to-Peer-Kredite vermittelt, ist sie auf genaue Risikobewertungen angewiesen, um ein nachhaltiges und profitables Kreditgeschäft aufrechtzuerhalten.
+- LendingClub steht vor der Herausforderung, Zahlungsausfallrisiken effektiv zu managen, während gleichzeitig die Renditen für Investoren optimiert werden. Da die Plattform Peer-to-Peer-Kredite vermittelt, ist sie auf genaue Risikobewertungen angewiesen, um ein nachhaltiges und profitables Kreditgeschäft aufrechtzuerhalten.
 
-Der CEO möchte Erkenntnisse darüber gewinnen, welche Faktoren mit Kreditrisiken in Verbindung stehen, und Modelle entwickeln, die die Ausfallwahrscheinlichkeit (Probability of Default, PD) neuer Antragsteller sowie mögliche Verluste auf bestehende Kredite vorhersagen. Dadurch soll eine Kreditrichtlinie etabliert werden, die bestimmt, wann ein Kredit bewilligt oder abgelehnt wird.
+- Der CEO möchte Erkenntnisse darüber gewinnen, welche Faktoren mit Kreditrisiken in Verbindung stehen, und Modelle entwickeln, die die Ausfallwahrscheinlichkeit (Probability of Default, PD) neuer Antragsteller sowie mögliche Verluste auf bestehende Kredite vorhersagen. Dadurch soll eine Kreditrichtlinie etabliert werden, die bestimmt, wann ein Kredit bewilligt oder abgelehnt wird.
 
-Eine wichtige Anforderung ist, dass die Modelle leicht verständlich sein müssen. Da das Unternehmen im Online-Bereich tätig ist, sind Transparenz und Kundenzufriedenheit entscheidend. Daher müssen wir nachvollziehbar erklären können, warum ein Kredit genehmigt oder abgelehnt wird.
+- Eine wichtige Anforderung ist, dass die Modelle leicht verständlich sein müssen. Da das Unternehmen im Online-Bereich tätig ist, sind Transparenz und Kundenzufriedenheit entscheidend. Daher müssen wir nachvollziehbar erklären können, warum ein Kredit genehmigt oder abgelehnt wird.
 
 **2.3 Was sind die Projektziele und Vorteile?**
 Identifizierung der Faktoren, die mit Kreditrisiken verbunden sind, um geschäftliche Einblicke zu gewinnen.

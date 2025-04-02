@@ -90,12 +90,12 @@ Die **Lösungspipeline** basiert auf dem CRISP-DM-Framework:
 - Datenbereinigung, -manipulation, -visualisierung und -exploration
 
 # 5. Projektstruktur
-- Artifacts: Enthält die Artefakte der Machine-Learning-Modelle, wie z. B. die .pkl-Dateien.
-- Input: Enthält die Rohdaten und das Datenwörterbuch.
-- Notebooks: Enthält alle entwickelten Jupyter-Notebooks. Dies ist die Forschungsumgebung.
-- Reports: Enthält Bilder für die visuelle Darstellung und das Storytelling.
-- Src: Enthält Python-Skripte, einschließlich EDA- und Modellierungs-Utilities, Fehlerbehandlung und Logger.
-- Requirements.txt und setup.py sind Werkzeuge, um das Projekt als Paket zu erstellen.
+- **Artifacts:** Enthält die Artefakte der Machine-Learning-Modelle, wie z. B. die .pkl-Dateien.
+- **Input:** Enthält die Rohdaten und das Datenwörterbuch.
+- **Notebooks:** Enthält alle entwickelten Jupyter-Notebooks. Dies ist die Forschungsumgebung.
+- **Reports:** Enthält Bilder für die visuelle Darstellung und das Storytelling.
+- **Src:** Enthält Python-Skripte, einschließlich EDA- und Modellierungs-Utilities, Fehlerbehandlung und Logger.
+- **Requirements**.txt und setup.py sind Werkzeuge, um das Projekt als Paket zu erstellen.
 
 # 6. Zentrale Erkenntnisse zum Kreditrisiko
 Das aktuelle Anlageportfolio von Lending Club weist die folgenden Merkmale auf:

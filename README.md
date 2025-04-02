@@ -76,22 +76,18 @@
 Die **Lösungspipeline** basiert auf dem CRISP-DM-Framework:
 
 1. Geschäftsverständnis (Business Understanding)
-
 2. Datenverständnis (Data Understanding)
-
 3. Datenvorbereitung (Data Preparation)
-
 4. Modellierung (Modelling)
-
 5. Validierung (Validation)
-
 6. Bereitstellung (Deployment)
 
-# 4. Technologies and Toools Used
-- Python (Pandas, Numpy, Matplotlib, Seaborn, Sciki-Learn, Statsmodels, Virtual Envs).
-- Machine learning classification and regression algorithms.
-- Statistics.
-- Data cleaning, manipulation, visualization and exploration.
+
+# 4. Verwendete Technologien und Tools
+- Python (Pandas, Numpy, Matplotlib, Seaborn, Scikit-Learn, Statsmodels, virtuelle Umgebungen)
+- Maschinelles Lernen (Klassifikations- und Regressionsalgorithmen)
+- Statistik
+- Datenbereinigung, -manipulation, -visualisierung und -exploration
 
 # 5. Project Structure
 - **Artifacts:** Contains the machine learning models artifacts, such as the pkl files.
@@ -100,6 +96,14 @@ Die **Lösungspipeline** basiert auf dem CRISP-DM-Framework:
 - **Reports:** Contains images for storytelling.
 - **Src:** Contains python scripts including eda and modeling utils, exception and logger.
 - **Requirements.txt** and **setup.py** are tools to build my project as a package.
+
+# 5. Projektstruktur
+- Artifacts: Enthält die Artefakte der Machine-Learning-Modelle, wie z. B. die .pkl-Dateien.
+- Input: Enthält die Rohdaten und das Datenwörterbuch.
+- Notebooks: Enthält alle entwickelten Jupyter-Notebooks. Dies ist die Forschungsumgebung.
+- Reports: Enthält Bilder für die visuelle Darstellung und das Storytelling.
+- Src: Enthält Python-Skripte, einschließlich EDA- und Modellierungs-Utilities, Fehlerbehandlung und Logger.
+- Requirements.txt und setup.py sind Werkzeuge, um das Projekt als Paket zu erstellen.
 
 # 6. Main Business Credit Risk Insights
 Lending Club's current investment portfolio presents the following characteristics:

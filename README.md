@@ -75,7 +75,7 @@
 
   - **IFRS 9 (International Financial Reporting Standard 9)** bietet Richtlinien zur Bewertung von Finanzanlagen. Im Gegensatz zu Basel III, das sich auf ein Jahr konzentriert, betrachtet IFRS 9 die Wahrscheinlichkeit eines Zahlungsausfalls über die gesamte Laufzeit eines Kredits.
 
-- Der "Expected Loss (EL)" (Erwartete Verlust) ist die durchschnittliche geschätzte Verlustsumme, die ein Kreditgeber aus ausgefallenen Krediten erwarten kann. Er basiert auf drei Faktoren:
+- **Der "Expected Loss (EL)" (Erwartete Verlust)** ist die durchschnittliche geschätzte Verlustsumme, die ein Kreditgeber aus ausgefallenen Krediten erwarten kann. Er basiert auf drei Faktoren:
 
     - **Probability of Default (PD)** – Wahrscheinlichkeit, dass ein Kreditnehmer ausfällt.
 

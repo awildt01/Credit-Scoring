@@ -87,15 +87,15 @@
 
 - **Das benötigte Kapital** zur Absicherung gegen Zahlungsausfälle wird mithilfe der EAD- und LGD-Modelle berechnet, um den Expected Loss (EL) zu schätzen. Dies trägt dazu bei, Risiken im Kreditgeschäft zu minimieren.
 
--Bei der Erstellung eines Kreditbewertungsmodells gibt es zwei Ansätze:
+- Bei der Erstellung eines Kreditbewertungsmodells gibt es zwei Ansätze:
 
--Antragsmodell ("Application Model"): Bewertet die Kreditwürdigkeit basierend auf Daten zum Zeitpunkt der Antragstellung.
+   - Antragsmodell ("Application Model"): Bewertet die Kreditwürdigkeit basierend auf Daten zum Zeitpunkt der Antragstellung.
 
--Verhaltensmodell ("Behavior Model"): Analysiert das Kreditverhalten nach der Kreditvergabe.
+   - Verhaltensmodell ("Behavior Model"): Analysiert das Kreditverhalten nach der Kreditvergabe.
 
--Eine "Kreditrichtlinie" ist eine Sammlung von Richtlinien, die Finanzinstitute zur Bewertung und Steuerung von Kreditrisiken verwenden. Dazu gehören Faktoren wie erwartete Rendite, Kreditbewertungen, Risikoklassen und erwartete Verluste.
+- **Eine "Kreditrichtlinie"** ist eine Sammlung von Richtlinien, die Finanzinstitute zur Bewertung und Steuerung von Kreditrisiken verwenden. Dazu gehören Faktoren wie erwartete Rendite, Kreditbewertungen, Risikoklassen und erwartete Verluste.
 
--"Return on Investment (ROI)" ist eine zentrale Kennzahl zur Messung der Rentabilität eines Kredits. Ein ausgewogenes Verhältnis zwischen ROI und Risiko ist essenziell für ein effektives Kreditrisikomanagement. Höhere Risiken können höhere Renditen bieten, gehen jedoch mit einer höheren Wahrscheinlichkeit eines Zahlungsausfalls einher.
+- **"Return on Investment (ROI)"** ist eine zentrale Kennzahl zur Messung der Rentabilität eines Kredits. Ein ausgewogenes Verhältnis zwischen ROI und Risiko ist essenziell für ein effektives Kreditrisikomanagement. Höhere Risiken können höhere Renditen bieten, gehen jedoch mit einer höheren Wahrscheinlichkeit eines Zahlungsausfalls einher.
 
 
 

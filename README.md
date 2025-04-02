@@ -114,13 +114,14 @@ Das aktuelle Anlageportfolio von Lending Club weist die folgenden Merkmale auf:
 
 <img src="reports/personal_indicators.png">
 
-**6.2 Financial Indicators:**
-- The maximum funded amount is $35,000, with 50% falling in the range of $8,000 to $20,000. The average is around $14,000.
-- Half of the interest rates range between 11% and 16.8%, with a maximum charge of 26% and a minimum of 5.42%.
-- The average annual income is $72,970, but this value can vary significantly, including individuals with extremely high incomes. It is extremely right-skewed.
-- Half have a debt-to-income ratio up to 16.6%.
-- Half have a credit limit ranging from $13,500 to $37,300. However, similar to annual income, this value can vary significantly, including individuals with extremely high credit limits.
-- Everything pointed out above suggests a conservative investment portfolio, with no high funded amounts or interest rates charged. 
+**6.2 Finanzielle Indikatoren:**
+- Der maximale Finanzierungsbetrag beträgt 35.000 $, wobei 50 % der Kredite zwischen 8.000 $ und 20.000 $ liegen. Der Durchschnitt liegt bei etwa 14.000 $.
+- Die Hälfte der Zinssätze liegt zwischen 11 % und 16,8 %, mit einem maximalen Zinssatz von 26 % und einem minimalen Zinssatz von 5,42 %.
+- Das durchschnittliche Jahreseinkommen beträgt 72.970 $, aber dieser Wert kann stark variieren, da auch Personen mit extrem hohem Einkommen enthalten sind. Die Verteilung ist stark rechtsschief.
+- Die Hälfte der Kreditnehmer hat eine Schulden-Einkommens-Quote (DTI) von bis zu 16,6 %.
+- Die Hälfte hat eine Kreditlinie im Bereich von 13.500 $ bis 37.300 $. Ähnlich wie beim Einkommen kann dieser Wert stark variieren, einschließlich Kreditnehmer mit extrem hohen Kreditlimits.
+
+Die oben genannten Punkte deuten auf ein konservatives Anlageportfolio hin, ohne hohe Finanzierungsbeträge oder übermäßige Zinssätze.
 
 <img src="reports/financial_indicators.png">
 
@@ -129,6 +130,11 @@ Das aktuelle Anlageportfolio von Lending Club weist die folgenden Merkmale auf:
 - There is a monotonic decrease in default rate as the applicant's grade improves (from G to A). Higher grades correspond to lower credit risk, with the bad rate for G-grade being 6.4 times higher than that for A-grade.
 - The bad rate consistently increases as the interest rate rises, indicating that higher interest rates are associated with higher credit risk. Loans with more than 20% interest rate have a bad rate approximately 8 times higher than those with 5% to 7% interest rates.
 - The bad rate consistently decreases as annual income increases, reflecting that lower annual incomes are associated with higher credit risk. For instance, individuals with annual incomes from 1,748 dollars to 24,111 dollars have a bad rate about two times higher than those with annual incomes of 120,000 dollars or higher. The same pattern holds for the debt-to-income ratio.
+
+**6.3 Kreditrisiko-Indikatoren:**
+- Es gibt einen monotonen Rückgang der Ausfallrate, wenn sich die Kreditnehmer-Bewertung verbessert (von G nach A). Höhere Bewertungen entsprechen einem geringeren Kreditrisiko, wobei die Ausfallrate für G-Bewertungen 6,4-mal höher ist als für A-Bewertungen.
+- Die Ausfallrate steigt kontinuierlich mit steigenden Zinssätzen, was darauf hindeutet, dass höhere Zinssätze mit einem höheren Kreditrisiko verbunden sind. Kredite mit mehr als 20 % Zinsen haben eine etwa 8-mal höhere Ausfallrate als Kredite mit Zinsen zwischen 5 % und 7 %.
+- Die Ausfallrate sinkt stetig mit steigendem Jahreseinkommen, was darauf hinweist, dass niedrigere Jahreseinkommen mit einem höheren Kreditrisiko verbunden sind. Zum Beispiel haben Personen mit einem Jahreseinkommen zwischen 1.748 $ und 24.111 $ eine etwa doppelt so hohe Ausfallrate wie Personen mit einem Jahreseinkommen von 120.000 $ oder mehr. Das gleiche Muster zeigt sich auch beim Schulden-Einkommens-Verhältnis.
 
 <img src="reports/credit_risk_grade.png">
 

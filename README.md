@@ -83,9 +83,9 @@
 
    - **Exposure at Default (EAD)** – Betrag, der zum Zeitpunkt des Ausfalls aussteht.
 
--LendingClub nutzt ein "PD-Modell/Kreditbewertungsmodell", um die Kreditwürdigkeit von Antragstellern anhand ihrer Kreditbewertungen einzuschätzen. Dies hilft bei der Entscheidung, ob ein Kredit bewilligt oder abgelehnt wird.
+- **LendingClub nutzt ein "PD-Modell/Kreditbewertungsmodell"**, um die Kreditwürdigkeit von Antragstellern anhand ihrer Kreditbewertungen einzuschätzen. Dies hilft bei der Entscheidung, ob ein Kredit bewilligt oder abgelehnt wird.
 
--Das benötigte Kapital zur Absicherung gegen Zahlungsausfälle wird mithilfe der EAD- und LGD-Modelle berechnet, um den Expected Loss (EL) zu schätzen. Dies trägt dazu bei, Risiken im Kreditgeschäft zu minimieren.
+- **Das benötigte Kapital** zur Absicherung gegen Zahlungsausfälle wird mithilfe der EAD- und LGD-Modelle berechnet, um den Expected Loss (EL) zu schätzen. Dies trägt dazu bei, Risiken im Kreditgeschäft zu minimieren.
 
 -Bei der Erstellung eines Kreditbewertungsmodells gibt es zwei Ansätze:
 

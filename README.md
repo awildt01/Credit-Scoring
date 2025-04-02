@@ -10,7 +10,8 @@
 
 - Die LGD- und EAD-Modellierung umfasst ein Beta-Regressionsproblem, d. h. eine Regressionsaufgabe, bei der die abhängigen Variablen beta-verteilt sind, nämlich die Recovery Rate und der Credit Conversion Factor.
 
-# 2. Business Problem and Objectives
+# 2. Geschäftliches Problem und Ziele
+
 **2.1 What is the Lending Club?:**
 - LendingClub is a **peer-to-peer lending platform** that facilitates the borrowing and lending of money directly between individuals, without the need for traditional financial institutions such as banks. The platform operates as an online marketplace, connecting borrowers seeking personal loans with investors willing to fund those loans.
 
@@ -33,6 +34,71 @@
 - When creating a Credit Scoring Model, which assesses creditworthiness for loan approval, using data available at the time of the application is considered an **"application model."** It is distinct from a **"behavior model."** This is the model I will build here.
 - A **"credit policy"** is a set of guidelines that financial institutions follow to evaluate and manage lending risk. Factors such as the expected ROI for each loan application, credit scores, risk classes, expected losses, and so on, are included.
 - **"Return on Investment (ROI)"** is a key measure of loan profitability. Balancing ROI with risk is vital for effective credit policy management. While higher-risk loans may offer more significant potential returns, they also come with a higher chance of default.
+
+
+# 2. Geschäftliches Problem und Ziele
+
+
+**2.1 Was ist der Lending Club?
+LendingClub ist eine Peer-to-Peer-Kreditplattform, die es Privatpersonen ermöglicht, direkt Geld zu verleihen und zu leihen, ohne traditionelle Finanzinstitute wie Banken einzubeziehen. Die Plattform fungiert als Online-Marktplatz, der Kreditnehmer, die einen Kredit benötigen, mit Investoren verbindet, die bereit sind, diese Kredite zu finanzieren.
+
+**2.2 Was ist das geschäftliche Problem?
+LendingClub steht vor der Herausforderung, Zahlungsausfallrisiken effektiv zu managen, während gleichzeitig die Renditen für Investoren optimiert werden. Da die Plattform Peer-to-Peer-Kredite vermittelt, ist sie auf genaue Risikobewertungen angewiesen, um ein nachhaltiges und profitables Kreditgeschäft aufrechtzuerhalten.
+
+Der CEO möchte Erkenntnisse darüber gewinnen, welche Faktoren mit Kreditrisiken in Verbindung stehen, und Modelle entwickeln, die die Ausfallwahrscheinlichkeit (Probability of Default, PD) neuer Antragsteller sowie mögliche Verluste auf bestehende Kredite vorhersagen. Dadurch soll eine Kreditrichtlinie etabliert werden, die bestimmt, wann ein Kredit bewilligt oder abgelehnt wird.
+
+Eine wichtige Anforderung ist, dass die Modelle leicht verständlich sein müssen. Da das Unternehmen im Online-Bereich tätig ist, sind Transparenz und Kundenzufriedenheit entscheidend. Daher müssen wir nachvollziehbar erklären können, warum ein Kredit genehmigt oder abgelehnt wird.
+
+**2.3 Was sind die Projektziele und Vorteile?
+Identifizierung der Faktoren, die mit Kreditrisiken verbunden sind, um geschäftliche Einblicke zu gewinnen.
+
+Entwicklung eines genauen Probability of Default (PD) Modells, um eine Scorecard zu erstellen. Diese wird LendingClub helfen, zu entscheiden, ob einem neuen Antragsteller ein Kredit gewährt wird oder nicht (Antragsmodell), basierend auf Kreditbewertungen.
+
+Entwicklung von Exposure at Default (EAD) und Loss Given Default (LGD) Modellen, um den Erwarteten Verlust (Expected Loss, EL) zu schätzen. Dies ermöglicht es LendingClub, ausreichend Kapitalreserven zu halten, um sich gegen Zahlungsausfälle zu schützen.
+
+Verbesserung des Risikomanagements und Optimierung der Renditen, indem eine Kreditrichtlinie erstellt wird, die das Risiko und die Kapitalrendite (ROI) von LendingClub ausbalanciert.
+
+Anwendung von Modellüberwachung und Wartung, um sicherzustellen, dass die Modelle weiterhin gültig bleiben. Wenn sich die Eigenschaften der Antragsteller erheblich ändern, können wir das Modell anpassen oder neu entwickeln.
+
+**2.4 Wichtige Konzepte im Kontext des Kreditrisikos
+-Finanzinstitute, wie LendingClub und Online-Kreditplattformen, verdienen Geld durch die Vergabe von Krediten. Sie erheben Zinsen, die eine wesentliche Einkommensquelle sind. Ein effektives Kreditrisikomanagement ist entscheidend, um sicherzustellen, dass Kreditnehmer ihre Schulden zurückzahlen und Verluste vermieden werden.
+
+-Kreditrisiko bezeichnet die Möglichkeit, dass ein Kreditnehmer seinen finanziellen Verpflichtungen nicht nachkommt, was zu Verlusten für den Kreditgeber führen kann. Wenn ein Kreditnehmer seine Schulden nicht fristgerecht begleicht, spricht man von einem "Zahlungsausfall" (Default). Dieser wird oft anhand eines bestimmten Zeitraums definiert – z. B. wird ein Kreditnehmer als ausgefallen betrachtet, wenn er seine Zahlungen 90 Tage überfällig ist.
+
+-Wichtige Regulierungen im Kreditmarkt stellen sicher, dass Finanzinstitute transparent und stabil arbeiten:
+
+-Basel III stellt sicher, dass Banken über ausreichend Kapital (Kapitalanforderungen) verfügen und Kreditrisiken korrekt bewerten.
+
+-Der Internal Ratings-Based Approach (IRB-A) erlaubt Banken, Kreditrisiken mithilfe der Konzepte PD, EAD und LGD selbst zu bestimmen.
+
+-IFRS 9 (International Financial Reporting Standard 9) bietet Richtlinien zur Bewertung von Finanzanlagen. Im Gegensatz zu Basel III, das sich auf ein Jahr konzentriert, betrachtet IFRS 9 die Wahrscheinlichkeit eines Zahlungsausfalls über die gesamte Laufzeit eines Kredits.
+
+-Der "Expected Loss (EL)" (Erwartete Verlust) ist die durchschnittliche geschätzte Verlustsumme, die ein Kreditgeber aus ausgefallenen Krediten erwarten kann. Er basiert auf drei Faktoren:
+
+-Probability of Default (PD) – Wahrscheinlichkeit, dass ein Kreditnehmer ausfällt.
+
+-Loss Given Default (LGD) – Anteil des ausgefallenen Kredits, der nicht zurückgewonnen werden kann.
+
+-Exposure at Default (EAD) – Betrag, der zum Zeitpunkt des Ausfalls aussteht.
+
+-LendingClub nutzt ein "PD-Modell/Kreditbewertungsmodell", um die Kreditwürdigkeit von Antragstellern anhand ihrer Kreditbewertungen einzuschätzen. Dies hilft bei der Entscheidung, ob ein Kredit bewilligt oder abgelehnt wird.
+
+-Das benötigte Kapital zur Absicherung gegen Zahlungsausfälle wird mithilfe der EAD- und LGD-Modelle berechnet, um den Expected Loss (EL) zu schätzen. Dies trägt dazu bei, Risiken im Kreditgeschäft zu minimieren.
+
+-Bei der Erstellung eines Kreditbewertungsmodells gibt es zwei Ansätze:
+
+-Antragsmodell ("Application Model"): Bewertet die Kreditwürdigkeit basierend auf Daten zum Zeitpunkt der Antragstellung.
+
+-Verhaltensmodell ("Behavior Model"): Analysiert das Kreditverhalten nach der Kreditvergabe.
+
+-Eine "Kreditrichtlinie" ist eine Sammlung von Richtlinien, die Finanzinstitute zur Bewertung und Steuerung von Kreditrisiken verwenden. Dazu gehören Faktoren wie erwartete Rendite, Kreditbewertungen, Risikoklassen und erwartete Verluste.
+
+-"Return on Investment (ROI)" ist eine zentrale Kennzahl zur Messung der Rentabilität eines Kredits. Ein ausgewogenes Verhältnis zwischen ROI und Risiko ist essenziell für ein effektives Kreditrisikomanagement. Höhere Risiken können höhere Renditen bieten, gehen jedoch mit einer höheren Wahrscheinlichkeit eines Zahlungsausfalls einher.
+
+
+
+
+
 
 # 3. Solution Pipeline
 The **solution pipeline** is based on the **crisp-dm** framework:

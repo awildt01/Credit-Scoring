@@ -113,7 +113,7 @@ Lending Club's current investment portfolio presents the following characteristi
 # 6. Zentrale Erkenntnisse zum Kreditrisiko
 Das aktuelle Anlageportfolio von Lending Club weist die folgenden Merkmale auf:
 
-** 6.1 Persönliche Indikatoren:
+** 6.1 Persönliche Indikatoren:**
 - Ungefähr 12 % der Kreditnehmer sind Zahlungsausfälle/schlechte Kreditnehmer.
 - Fast drei von vier Krediten haben eine Laufzeit von 36 Monaten.
 - Mehr als 75 % der Kreditnehmer haben mindestens 2 Jahre Berufserfahrung, wobei über 30 % zehn Jahre oder mehr Erfahrung haben.

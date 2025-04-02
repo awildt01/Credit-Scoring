@@ -71,18 +71,21 @@
 - **"Return on Investment (ROI)"** ist eine zentrale Kennzahl zur Messung der Rentabilität eines Kredits. Ein ausgewogenes Verhältnis zwischen ROI und Risiko ist essenziell für ein effektives Kreditrisikomanagement. Höhere Risiken können höhere Renditen bieten, gehen jedoch mit einer höheren Wahrscheinlichkeit eines Zahlungsausfalls einher.
 
 
+# 3. Lösungspipeline
 
+Die **Lösungspipeline** basiert auf dem CRISP-DM-Framework:
 
+1. Geschäftsverständnis (Business Understanding)
 
+2. Datenverständnis (Data Understanding)
 
-# 3. Solution Pipeline
-The **solution pipeline** is based on the **crisp-dm** framework:
-1. Business understanding.
-2. Data understanding.
-3. Data preparation.
-4. Modelling.
-5. Validation.
-6. Deployment.
+3. Datenvorbereitung (Data Preparation)
+
+4. Modellierung (Modelling)
+
+5. Validierung (Validation)
+
+6. Bereitstellung (Deployment)
 
 # 4. Technologies and Toools Used
 - Python (Pandas, Numpy, Matplotlib, Seaborn, Sciki-Learn, Statsmodels, Virtual Envs).

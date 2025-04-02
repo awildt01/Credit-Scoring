@@ -63,11 +63,11 @@
 
 **2.4 Wichtige Konzepte im Kontext des Kreditrisikos**
 
--Finanzinstitute, wie LendingClub und Online-Kreditplattformen, verdienen Geld durch die Vergabe von Krediten. Sie erheben Zinsen, die eine wesentliche Einkommensquelle sind. Ein effektives Kreditrisikomanagement ist entscheidend, um sicherzustellen, dass Kreditnehmer ihre Schulden zurückzahlen und Verluste vermieden werden.
+- **Finanzinstitute**, wie LendingClub und Online-Kreditplattformen, verdienen Geld durch die Vergabe von Krediten. Sie erheben Zinsen, die eine wesentliche Einkommensquelle sind. Ein effektives Kreditrisikomanagement ist entscheidend, um sicherzustellen, dass Kreditnehmer ihre Schulden zurückzahlen und Verluste vermieden werden.
 
 -Kreditrisiko bezeichnet die Möglichkeit, dass ein Kreditnehmer seinen finanziellen Verpflichtungen nicht nachkommt, was zu Verlusten für den Kreditgeber führen kann. Wenn ein Kreditnehmer seine Schulden nicht fristgerecht begleicht, spricht man von einem "Zahlungsausfall" (Default). Dieser wird oft anhand eines bestimmten Zeitraums definiert – z. B. wird ein Kreditnehmer als ausgefallen betrachtet, wenn er seine Zahlungen 90 Tage überfällig ist.
 
--Wichtige Regulierungen im Kreditmarkt stellen sicher, dass Finanzinstitute transparent und stabil arbeiten:
+- Wichtige Regulierungen im Kreditmarkt stellen sicher, dass Finanzinstitute transparent und stabil arbeiten:
 
 -Basel III stellt sicher, dass Banken über ausreichend Kapital (Kapitalanforderungen) verfügen und Kreditrisiken korrekt bewerten.
 

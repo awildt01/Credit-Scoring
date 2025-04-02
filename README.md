@@ -26,6 +26,7 @@
 5. Apply **model monitoring** and maintenance techniques to safeguard our results from population instability, characterized by significant changes in loan applicants' characteristics. This will allow us to understand whether the built model is still useful in the future or whether the loan applicants characteristics changed significantly, such that we will need to redevelop it.
 
 **2.4 Which are the important concepts to know in the context of credit risk?**
+
 - **Financial institutions**, like LendingClub and online lending platforms, **make money by lending to people and businesses.** When they lend money, they **charge interest**, which is a significant source of their **profits**. **Managing credit risk well is crucial** for these institutions. This means ensuring that borrowers pay back their loans on time to avoid losses.
 - **Credit risk** is the possibility that a borrower might not fulfill their financial obligations, leading to a loss for the lender. If a borrower fails to meet the agreed-upon terms, it's called a "default," and it can result in financial losses for the lender. The **default** definition is associated with a time horizon. For example, if a borrower hasn't paid their debt within 90 days of the due date, they are considered in default.
 - In the credit market, important **rules** help keep things honest and clear. **Basel III** is one such set of rules, making sure banks have **enough money (capital requirements)** and follow **guidelines for assessing loan risks**. The **Internal Rating-Based Approach (IRB-A)** lets banks figure out credit risks using concepts like Probability of Default (PD), Exposure at Default (EAD), and Loss Given Default (LGD). Another rule, **International Financial Reporting Standard 9 (IFRS 9)**, gives standards for measuring financial assets. It's special because it looks at the chance of a loan not being paid back over its entire life, unlike Basel, which checks it for one year. These rules help banks have enough money, handle risks well, and keep the credit market steady and trustworthy.
@@ -61,6 +62,7 @@
 5. Anwendung von Modellüberwachung und Wartung, um sicherzustellen, dass die Modelle weiterhin gültig bleiben. Wenn sich die Eigenschaften der Antragsteller erheblich ändern, können wir das Modell anpassen oder neu entwickeln.
 
 **2.4 Wichtige Konzepte im Kontext des Kreditrisikos**
+
 -Finanzinstitute, wie LendingClub und Online-Kreditplattformen, verdienen Geld durch die Vergabe von Krediten. Sie erheben Zinsen, die eine wesentliche Einkommensquelle sind. Ein effektives Kreditrisikomanagement ist entscheidend, um sicherzustellen, dass Kreditnehmer ihre Schulden zurückzahlen und Verluste vermieden werden.
 
 -Kreditrisiko bezeichnet die Möglichkeit, dass ein Kreditnehmer seinen finanziellen Verpflichtungen nicht nachkommt, was zu Verlusten für den Kreditgeber führen kann. Wenn ein Kreditnehmer seine Schulden nicht fristgerecht begleicht, spricht man von einem "Zahlungsausfall" (Default). Dieser wird oft anhand eines bestimmten Zeitraums definiert – z. B. wird ein Kreditnehmer als ausgefallen betrachtet, wenn er seine Zahlungen 90 Tage überfällig ist.

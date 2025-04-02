@@ -110,7 +110,7 @@ Lending Club's current investment portfolio presents the following characteristi
 - Over 15% live in California.
 - Everything pointed out above suggests a conservative profile among applicants: older individuals with financial and professional stability.
 
-* 6. Zentrale Erkenntnisse zum Kreditrisiko
+# 6. Zentrale Erkenntnisse zum Kreditrisiko
 Das aktuelle Anlageportfolio von Lending Club weist die folgenden Merkmale auf:
 
 ** 6.1 Persönliche Indikatoren:

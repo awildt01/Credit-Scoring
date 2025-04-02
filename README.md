@@ -50,15 +50,15 @@
 - Eine wichtige Anforderung ist, dass die Modelle leicht verständlich sein müssen. Da das Unternehmen im Online-Bereich tätig ist, sind Transparenz und Kundenzufriedenheit entscheidend. Daher müssen wir nachvollziehbar erklären können, warum ein Kredit genehmigt oder abgelehnt wird.
 
 **2.3 Was sind die Projektziele und Vorteile?**
-Identifizierung der Faktoren, die mit Kreditrisiken verbunden sind, um geschäftliche Einblicke zu gewinnen.
+1. Identifizierung der Faktoren, die mit Kreditrisiken verbunden sind, um geschäftliche Einblicke zu gewinnen.
 
-Entwicklung eines genauen Probability of Default (PD) Modells, um eine Scorecard zu erstellen. Diese wird LendingClub helfen, zu entscheiden, ob einem neuen Antragsteller ein Kredit gewährt wird oder nicht (Antragsmodell), basierend auf Kreditbewertungen.
+2. Entwicklung eines genauen Probability of Default (PD) Modells, um eine Scorecard zu erstellen. Diese wird LendingClub helfen, zu entscheiden, ob einem neuen Antragsteller ein Kredit gewährt wird oder nicht (Antragsmodell), basierend auf Kreditbewertungen.
 
-Entwicklung von Exposure at Default (EAD) und Loss Given Default (LGD) Modellen, um den Erwarteten Verlust (Expected Loss, EL) zu schätzen. Dies ermöglicht es LendingClub, ausreichend Kapitalreserven zu halten, um sich gegen Zahlungsausfälle zu schützen.
+3. Entwicklung von Exposure at Default (EAD) und Loss Given Default (LGD) Modellen, um den Erwarteten Verlust (Expected Loss, EL) zu schätzen. Dies ermöglicht es LendingClub, ausreichend Kapitalreserven zu halten, um sich gegen Zahlungsausfälle zu schützen.
 
-Verbesserung des Risikomanagements und Optimierung der Renditen, indem eine Kreditrichtlinie erstellt wird, die das Risiko und die Kapitalrendite (ROI) von LendingClub ausbalanciert.
+4. Verbesserung des Risikomanagements und Optimierung der Renditen, indem eine Kreditrichtlinie erstellt wird, die das Risiko und die Kapitalrendite (ROI) von LendingClub ausbalanciert.
 
-Anwendung von Modellüberwachung und Wartung, um sicherzustellen, dass die Modelle weiterhin gültig bleiben. Wenn sich die Eigenschaften der Antragsteller erheblich ändern, können wir das Modell anpassen oder neu entwickeln.
+5. Anwendung von Modellüberwachung und Wartung, um sicherzustellen, dass die Modelle weiterhin gültig bleiben. Wenn sich die Eigenschaften der Antragsteller erheblich ändern, können wir das Modell anpassen oder neu entwickeln.
 
 **2.4 Wichtige Konzepte im Kontext des Kreditrisikos**
 -Finanzinstitute, wie LendingClub und Online-Kreditplattformen, verdienen Geld durch die Vergabe von Krediten. Sie erheben Zinsen, die eine wesentliche Einkommensquelle sind. Ein effektives Kreditrisikomanagement ist entscheidend, um sicherzustellen, dass Kreditnehmer ihre Schulden zurückzahlen und Verluste vermieden werden.

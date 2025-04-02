@@ -138,24 +138,28 @@ Die oben genannten Punkte deuten auf ein konservatives Anlageportfolio hin, ohne
     
 <img src="reports/increasing_trend.png">
 
-# 7. Modeling
+# 7. Modellierung
 
-**7.1 Data Cleaning:**
-- First of all, **data cleaning** was performed to turn the raw data suitable for data exploration and modeling. Tasks performed in this step:
-- Obtain a sorted dataframe, providing a chronological order for the loan data.
-- Remove features with higher than 70% missing rate, excessive cardinality, unique values per observation, no variance/constant values, and irrelevant variables to the business or modeling point of view.
-- Treat missing values, removing observations with missings when they represent a very small portion of the data and imputing them when they represent a specific value, like zero.
-- ⁠Convert features to correct data type (object to datetime and int).
-- ⁠Create new independent features.
-- ⁠Create the target variables for the PD (stablishing a default definition and assigning 1 to good borrowers and 0 to bad borrowers in order to interpret positive coefficients as positive outcomes), EAD (credit conversion factor) and LGD (recovery rate) models.
-- ⁠Search and fix inconsistent outlier values.
-- ⁠Optimize memory, obtaining a final parquet file.
-- As a result, we went from 75 features to a dataset with 42 variables in its correct data types, optimized in terms of memory usage, with some missing values and outliers treat and new useful extracted features. 
+**7.1 Datenbereinigung:**
 
-**7.2 Exploratory data analysis:**
-- The goal of the exploratory data analysis was to **investigate Lending Club's current investment portfolio's personal, financial, and credit risk indicators**, as previously mentioned. Additionally, in this step, I **determined** the final set of **dummy variables** to construct for the **PD Model**, essentially outlining the preprocessing steps to be undertaken.
-- Due to interpretability requirements, the PD Model must include only dummy variables. To create these dummies, I analyzed the discriminatory power of each categorical and numerical variable by assessing the **Weight of Evidence (WoE)** for each category. Subsequently, using both the WoE values and the proportion of observations, I grouped categories together to construct additional dummies. The goal was to **combine** similar credit risk/WoE **categories** and categories with low proportions of observations (to prevent overfitting). An important observation is that the highest credit risk or lowest WoE categories, the reference categories, were separated for further dropping, in order to avoid multicolinearity issues (dummy variable trap). 
-- For **continuous features**, I applied **feature discretization** to facilitate this categorical analysis. Discretizing continuous features allows for a more comprehensive understanding of their relationship with the target variable. This process helps minimize the impact of outliers and asymmetries, enables the assessment of potential linear monotonic behaviors, and provides the opportunity to apply treatments when such behaviors are not observed. It's important to note, however, that discretization comes at the cost of increased dimensionality and a loss of information.
+- Zuerst wurde Datenbereinigung durchgeführt, um die Rohdaten für die Datenexploration und Modellierung geeignet zu machen. Die in diesem Schritt durchgeführten Aufgaben:
+- Erstellen eines sortierten DataFrames, der eine chronologische Reihenfolge für die Kreditdaten bereitstellt.
+- Entfernen von Merkmalen mit einer Fehlerrate von mehr als 70%, übermäßiger Kardinalität, einzigartigen Werten pro Beobachtung, fehlender Varianz/konstanten Werten und irrelevanten Variablen aus der Geschäfts- oder Modellierungsperspektive.
+- Behandeln von fehlenden Werten, indem Beobachtungen mit fehlenden Werten entfernt werden, wenn sie nur einen sehr kleinen Teil der Daten ausmachen, und sie imputiert werden, wenn sie einen spezifischen Wert darstellen, wie z.B. Null.
+- Umwandlung von Merkmalen in den richtigen Datentyp (Objekt in datetime und int).
+- Erstellen neuer unabhängiger Merkmale.
+- Erstellen der Zielvariablen für die PD (Festlegung einer Standarddefinition für den Ausfall und Zuweisung von 1 für gute Kreditnehmer und 0 für schlechte Kreditnehmer, um positive Koeffizienten als positive Ergebnisse zu interpretieren), EAD (Kreditumwandlungsfaktor) und LGD (Rückzahlungsrate) Modelle.
+- Suchen und Beheben inkonsistenter Ausreißerwerte.
+- Optimierung des Speichers, Erstellen einer endgültigen Parquet-Datei.
+- Als Ergebnis haben wir von 75 Merkmalen auf ein Datenset mit 42 Variablen in den richtigen Datentypen umgeschaltet, das in Bezug auf die Speichernutzung optimiert ist, mit behandelten fehlenden Werten und Ausreißern sowie neuen, nützlichen extrahierten Merkmalen.
+
+
+
+**7.2 Explorative Datenanalyse:**
+
+- Das Ziel der explorativen Datenanalyse war es, die persönlichen, finanziellen und kreditrisikobezogenen Indikatoren des aktuellen Investitionsportfolios von Lending Club zu untersuchen, wie bereits zuvor erwähnt. Zusätzlich habe ich in diesem Schritt das endgültige Set an Dummy-Variablen für das PD-Modell festgelegt und im Wesentlichen die Vorverarbeitungsschritte skizziert, die durchgeführt werden sollten.
+- Aufgrund der Anforderungen an die Interpretierbarkeit muss das PD-Modell nur Dummy-Variablen enthalten. Um diese Dummies zu erstellen, habe ich die diskriminierende Kraft jeder kategorialen und numerischen Variablen analysiert, indem ich das Weight of Evidence (WoE) für jede Kategorie bewertet habe. Anschließend habe ich mithilfe der WoE-Werte und der Häufigkeit der Beobachtungen Kategorien zusammengefasst, um zusätzliche Dummies zu erstellen. Das Ziel war es, ähnliche Kreditrisiko-/WoE-Kategorien sowie Kategorien mit niedrigen Beobachtungsanteilen zu kombinieren (um Overfitting zu verhindern). Eine wichtige Beobachtung war, dass die höchsten Kreditrisiko- oder niedrigsten WoE-Kategorien, die Referenzkategorien, für das weitere Entfernen separiert wurden, um Multikollinearitätsprobleme (Dummy-Variablenfalle) zu vermeiden.
+- Für kontinuierliche Merkmale habe ich Feature-Disretisierung angewendet, um diese kategoriale Analyse zu erleichtern. Die Diskretisierung kontinuierlicher Merkmale ermöglicht ein besseres Verständnis ihrer Beziehung zur Zielvariablen. Dieser Prozess hilft, die Auswirkungen von Ausreißern und Asymmetrien zu minimieren, ermöglicht die Bewertung potenzieller linearer monotoner Verhaltensweisen und bietet die Möglichkeit, Behandlungen anzuwenden, wenn solche Verhaltensweisen nicht beobachtet werden. Es ist jedoch wichtig zu beachten, dass die Diskretisierung mit einer erhöhten Dimensionalität und einem Informationsverlust einhergeht.
 
 **7.3 PD Modeling:**
 - In PD modeling, I initially excluded variables that would not be available at the time of prediction to prevent data leakage, such as the funded amount or total payments. Additionally, I eliminated variables that demonstrated no discriminatory power during the Exploratory Data Analysis (EDA).

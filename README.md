@@ -2,10 +2,16 @@
 
 <img src="reports/logoLC.jpeg" width="800px" height="40%">
 
-# 1. Project Description
+# 1. Projektbeschreibung
 - In this project, I will build three **machine learning** models to predict the three components of expected loss in the context of **credit risk modeling** at the **Lending Club** (a peer-to-peer credit company): **Probability of Default (PD), Exposure at Default (EAD) and Loss Given Default (LGD)**. The expected loss will be the product of these elements: **Expected Loss (EL) = PD * EAD * LGD**. These models will be used to stablish a **credit policy**, deciding wheter to grant a loan or not for new applicants **(application model)** based on their **credit scores** and **expected losses** on loans. By estimating the Expected Loss (EL) from each loan, the Lending Club can also assess the required capital to hold to protect itself against defaults.
 - The PD modelling encompasses an imbalanced binary classification problem with target being 1 in case of non-default and 0 in case of default (minority class). A Logistic Regression model will be built. 
 - The LGD and EAD modelling encompasses a beta regression problem, that is, a regression task in which the dependent variables are beta distributed, the recovery rate and credit conversion factor, respectively.
+
+- In diesem Projekt werde ich drei Machine-Learning-Modelle entwickeln, um die drei Komponenten des erwarteten Verlusts im Kontext des **Kreditrisikomodells** beim **Lending Club** (einem Peer-to-Peer-Kreditunternehmen) vorherzusagen: Wahrscheinlichkeit eines Zahlungsausfalls (Probability of Default, PD), Exposition zum Zeitpunkt des Ausfalls (Exposure at Default, EAD) und Verlust bei Ausfall (Loss Given Default, LGD). Der erwartete Verlust wird als Produkt dieser Elemente berechnet: Erwarteter Verlust (EL) = PD * EAD * LGD. Diese Modelle werden verwendet, um eine Kreditrichtlinie zu erstellen, die darüber entscheidet, ob neuen Antragstellern basierend auf ihrer Kreditwürdigkeit und den erwarteten Verlusten auf Krediten ein Kredit gewährt wird oder nicht. Durch die Schätzung des erwarteten Verlusts (EL) für jeden Kredit kann der Lending Club zudem das erforderliche Kapital bewerten, das zur Absicherung gegen Zahlungsausfälle vorgehalten werden muss.
+
+- Das PD-Modell umfasst ein unausgeglichenes binäres Klassifikationsproblem, bei dem das Ziel 1 ist, wenn kein Zahlungsausfall vorliegt, und 0, wenn ein Zahlungsausfall auftritt (Minderheitsklasse). Es wird ein logistisches Regressionsmodell entwickelt.
+
+- Die LGD- und EAD-Modellierung umfasst ein Beta-Regressionsproblem, d. h. eine Regressionsaufgabe, bei der die abhängigen Variablen beta-verteilt sind, nämlich die Recovery Rate und der Credit Conversion Factor.
 
 # 2. Business Problem and Objectives
 **2.1 What is the Lending Club?:**

@@ -97,23 +97,10 @@ Die **Lösungspipeline** basiert auf dem CRISP-DM-Framework:
 - Src: Enthält Python-Skripte, einschließlich EDA- und Modellierungs-Utilities, Fehlerbehandlung und Logger.
 - Requirements.txt und setup.py sind Werkzeuge, um das Projekt als Paket zu erstellen.
 
-# 6. Main Business Credit Risk Insights
-Lending Club's current investment portfolio presents the following characteristics:
-
-**6.1 Personal Indicators:**
-- Approximately 12% are defaulters/bad borrowers.
-- Nearly three out of four loans have a 36-month term.
-- More than 75% have at least 2 years of professional experience, with over 30% having ten years or more.
-- Over 90% own a house through a mortgage or pay rent, while only 8.5% own their houses outright.
-- Nearly 90% have grades ranging from A to D, while grades F and G make up less than 4% of the borrowers.
-- The reason for taking out 80% of the loans is to either consolidate debt or use them for credit card payments.
-- Over 15% live in California.
-- Everything pointed out above suggests a conservative profile among applicants: older individuals with financial and professional stability.
-
 # 6. Zentrale Erkenntnisse zum Kreditrisiko
 Das aktuelle Anlageportfolio von Lending Club weist die folgenden Merkmale auf:
 
-** 6.1 Persönliche Indikatoren:**
+**6.1 Persönliche Indikatoren:**
 - Ungefähr 12 % der Kreditnehmer sind Zahlungsausfälle/schlechte Kreditnehmer.
 - Fast drei von vier Krediten haben eine Laufzeit von 36 Monaten.
 - Mehr als 75 % der Kreditnehmer haben mindestens 2 Jahre Berufserfahrung, wobei über 30 % zehn Jahre oder mehr Erfahrung haben.

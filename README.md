@@ -125,12 +125,6 @@ Die oben genannten Punkte deuten auf ein konservatives Anlageportfolio hin, ohne
 
 <img src="reports/financial_indicators.png">
 
-
-**6.3 Credit Risk Indicators:**
-- There is a monotonic decrease in default rate as the applicant's grade improves (from G to A). Higher grades correspond to lower credit risk, with the bad rate for G-grade being 6.4 times higher than that for A-grade.
-- The bad rate consistently increases as the interest rate rises, indicating that higher interest rates are associated with higher credit risk. Loans with more than 20% interest rate have a bad rate approximately 8 times higher than those with 5% to 7% interest rates.
-- The bad rate consistently decreases as annual income increases, reflecting that lower annual incomes are associated with higher credit risk. For instance, individuals with annual incomes from 1,748 dollars to 24,111 dollars have a bad rate about two times higher than those with annual incomes of 120,000 dollars or higher. The same pattern holds for the debt-to-income ratio.
-
 **6.3 Kreditrisiko-Indikatoren:**
 - Es gibt einen monotonen Rückgang der Ausfallrate, wenn sich die Kreditnehmer-Bewertung verbessert (von G nach A). Höhere Bewertungen entsprechen einem geringeren Kreditrisiko, wobei die Ausfallrate für G-Bewertungen 6,4-mal höher ist als für A-Bewertungen.
 - Die Ausfallrate steigt kontinuierlich mit steigenden Zinssätzen, was darauf hindeutet, dass höhere Zinssätze mit einem höheren Kreditrisiko verbunden sind. Kredite mit mehr als 20 % Zinsen haben eine etwa 8-mal höhere Ausfallrate als Kredite mit Zinsen zwischen 5 % und 7 %.
@@ -138,9 +132,9 @@ Die oben genannten Punkte deuten auf ein konservatives Anlageportfolio hin, ohne
 
 <img src="reports/credit_risk_grade.png">
 
-**6.4 Conclusion:**
-- There is an observed increasing trend in the number of loans granted over time.
-- Although Lending Club has a conservative portfolio, the default rate is very high, and motivates our project. It needs to manage risks effectively to maximize profit and maintain healthy business. 
+**6.4 Fazit:**
+- Es gibt einen steigenden Trend bei der Anzahl der gewährten Kredite über die Zeit.
+- Obwohl Lending Club ein konservatives Portfolio hat, ist die Ausfallrate sehr hoch, was unser Projekt motiviert. Das Unternehmen muss Risiken effektiv managen, um den Gewinn zu maximieren und ein stabiles Geschäft zu gewährleisten.
     
 <img src="reports/increasing_trend.png">
 

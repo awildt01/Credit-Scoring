@@ -69,7 +69,7 @@
 
 - Wichtige Regulierungen im Kreditmarkt stellen sicher, dass Finanzinstitute transparent und stabil arbeiten:
 
-  - **Basel III* stellt sicher, dass Banken über ausreichend Kapital (Kapitalanforderungen) verfügen und Kreditrisiken korrekt bewerten.
+  - **Basel III** stellt sicher, dass Banken über ausreichend Kapital (Kapitalanforderungen) verfügen und Kreditrisiken korrekt bewerten.
 
   - Der Internal **Ratings-Based Approach (IRB-A)** erlaubt Banken, Kreditrisiken mithilfe der Konzepte PD, EAD und LGD selbst zu bestimmen.
 

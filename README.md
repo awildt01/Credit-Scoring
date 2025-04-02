@@ -69,13 +69,13 @@
 
 - Wichtige Regulierungen im Kreditmarkt stellen sicher, dass Finanzinstitute transparent und stabil arbeiten:
 
-  - Basel III stellt sicher, dass Banken über ausreichend Kapital (Kapitalanforderungen) verfügen und Kreditrisiken korrekt bewerten.
+  - **Basel III* stellt sicher, dass Banken über ausreichend Kapital (Kapitalanforderungen) verfügen und Kreditrisiken korrekt bewerten.
 
-  - Der Internal Ratings-Based Approach (IRB-A) erlaubt Banken, Kreditrisiken mithilfe der Konzepte PD, EAD und LGD selbst zu bestimmen.
+  - Der Internal **Ratings-Based Approach (IRB-A)** erlaubt Banken, Kreditrisiken mithilfe der Konzepte PD, EAD und LGD selbst zu bestimmen.
 
-  - IFRS 9 (International Financial Reporting Standard 9) bietet Richtlinien zur Bewertung von Finanzanlagen. Im Gegensatz zu Basel III, das sich auf ein Jahr konzentriert, betrachtet IFRS 9 die Wahrscheinlichkeit eines Zahlungsausfalls über die gesamte Laufzeit eines Kredits.
+  - **IFRS 9 (International Financial Reporting Standard 9)** bietet Richtlinien zur Bewertung von Finanzanlagen. Im Gegensatz zu Basel III, das sich auf ein Jahr konzentriert, betrachtet IFRS 9 die Wahrscheinlichkeit eines Zahlungsausfalls über die gesamte Laufzeit eines Kredits.
 
--Der "Expected Loss (EL)" (Erwartete Verlust) ist die durchschnittliche geschätzte Verlustsumme, die ein Kreditgeber aus ausgefallenen Krediten erwarten kann. Er basiert auf drei Faktoren:
+- Der "Expected Loss (EL)" (Erwartete Verlust) ist die durchschnittliche geschätzte Verlustsumme, die ein Kreditgeber aus ausgefallenen Krediten erwarten kann. Er basiert auf drei Faktoren:
 
 -Probability of Default (PD) – Wahrscheinlichkeit, dass ein Kreditnehmer ausfällt.
 

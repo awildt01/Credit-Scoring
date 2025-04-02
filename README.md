@@ -39,17 +39,17 @@
 # 2. Geschäftliches Problem und Ziele
 
 
-**2.1 Was ist der Lending Club?
+**2.1 Was ist der Lending Club?**
 LendingClub ist eine Peer-to-Peer-Kreditplattform, die es Privatpersonen ermöglicht, direkt Geld zu verleihen und zu leihen, ohne traditionelle Finanzinstitute wie Banken einzubeziehen. Die Plattform fungiert als Online-Marktplatz, der Kreditnehmer, die einen Kredit benötigen, mit Investoren verbindet, die bereit sind, diese Kredite zu finanzieren.
 
-**2.2 Was ist das geschäftliche Problem?
+**2.2 Was ist das geschäftliche Problem?**
 LendingClub steht vor der Herausforderung, Zahlungsausfallrisiken effektiv zu managen, während gleichzeitig die Renditen für Investoren optimiert werden. Da die Plattform Peer-to-Peer-Kredite vermittelt, ist sie auf genaue Risikobewertungen angewiesen, um ein nachhaltiges und profitables Kreditgeschäft aufrechtzuerhalten.
 
 Der CEO möchte Erkenntnisse darüber gewinnen, welche Faktoren mit Kreditrisiken in Verbindung stehen, und Modelle entwickeln, die die Ausfallwahrscheinlichkeit (Probability of Default, PD) neuer Antragsteller sowie mögliche Verluste auf bestehende Kredite vorhersagen. Dadurch soll eine Kreditrichtlinie etabliert werden, die bestimmt, wann ein Kredit bewilligt oder abgelehnt wird.
 
 Eine wichtige Anforderung ist, dass die Modelle leicht verständlich sein müssen. Da das Unternehmen im Online-Bereich tätig ist, sind Transparenz und Kundenzufriedenheit entscheidend. Daher müssen wir nachvollziehbar erklären können, warum ein Kredit genehmigt oder abgelehnt wird.
 
-**2.3 Was sind die Projektziele und Vorteile?
+**2.3 Was sind die Projektziele und Vorteile?**
 Identifizierung der Faktoren, die mit Kreditrisiken verbunden sind, um geschäftliche Einblicke zu gewinnen.
 
 Entwicklung eines genauen Probability of Default (PD) Modells, um eine Scorecard zu erstellen. Diese wird LendingClub helfen, zu entscheiden, ob einem neuen Antragsteller ein Kredit gewährt wird oder nicht (Antragsmodell), basierend auf Kreditbewertungen.
@@ -60,7 +60,7 @@ Verbesserung des Risikomanagements und Optimierung der Renditen, indem eine Kred
 
 Anwendung von Modellüberwachung und Wartung, um sicherzustellen, dass die Modelle weiterhin gültig bleiben. Wenn sich die Eigenschaften der Antragsteller erheblich ändern, können wir das Modell anpassen oder neu entwickeln.
 
-**2.4 Wichtige Konzepte im Kontext des Kreditrisikos
+**2.4 Wichtige Konzepte im Kontext des Kreditrisikos**
 -Finanzinstitute, wie LendingClub und Online-Kreditplattformen, verdienen Geld durch die Vergabe von Krediten. Sie erheben Zinsen, die eine wesentliche Einkommensquelle sind. Ein effektives Kreditrisikomanagement ist entscheidend, um sicherzustellen, dass Kreditnehmer ihre Schulden zurückzahlen und Verluste vermieden werden.
 
 -Kreditrisiko bezeichnet die Möglichkeit, dass ein Kreditnehmer seinen finanziellen Verpflichtungen nicht nachkommt, was zu Verlusten für den Kreditgeber führen kann. Wenn ein Kreditnehmer seine Schulden nicht fristgerecht begleicht, spricht man von einem "Zahlungsausfall" (Default). Dieser wird oft anhand eines bestimmten Zeitraums definiert – z. B. wird ein Kreditnehmer als ausgefallen betrachtet, wenn er seine Zahlungen 90 Tage überfällig ist.

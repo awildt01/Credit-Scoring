@@ -77,11 +77,11 @@
 
 - Der "Expected Loss (EL)" (Erwartete Verlust) ist die durchschnittliche geschätzte Verlustsumme, die ein Kreditgeber aus ausgefallenen Krediten erwarten kann. Er basiert auf drei Faktoren:
 
--Probability of Default (PD) – Wahrscheinlichkeit, dass ein Kreditnehmer ausfällt.
+    - **Probability of Default (PD)** – Wahrscheinlichkeit, dass ein Kreditnehmer ausfällt.
 
--Loss Given Default (LGD) – Anteil des ausgefallenen Kredits, der nicht zurückgewonnen werden kann.
+   - **Loss Given Default (LGD)** – Anteil des ausgefallenen Kredits, der nicht zurückgewonnen werden kann.
 
--Exposure at Default (EAD) – Betrag, der zum Zeitpunkt des Ausfalls aussteht.
+   - **Exposure at Default (EAD)** – Betrag, der zum Zeitpunkt des Ausfalls aussteht.
 
 -LendingClub nutzt ein "PD-Modell/Kreditbewertungsmodell", um die Kreditwürdigkeit von Antragstellern anhand ihrer Kreditbewertungen einzuschätzen. Dies hilft bei der Entscheidung, ob ein Kredit bewilligt oder abgelehnt wird.
 

@@ -313,9 +313,9 @@ deactivate
 Lending-Club-Credit-Scoring/
 
 │
-├── data/                # Rohdaten, externe Datenquellen
-│   ├── raw/
-│   ├── processed/
+├── data/                # Rohdaten, externe Datenquellen 
+│    ├── raw/
+│    ├── processed/
 
 │
 ├── notebooks/           # Jupyter Notebooks

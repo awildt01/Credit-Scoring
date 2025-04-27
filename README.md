@@ -309,6 +309,8 @@ deactivate
 - Github: https://github.com/allmeidaapedro
 - Gmail: pedrooalmeida.net@gmail.com
 
+```bash
+
 Lending-Club-Credit-Scoring/
 |
 +-- data/                 # Rohdaten, externe Datenquellen
@@ -331,3 +333,4 @@ Lending-Club-Credit-Scoring/
 +-- environment.yml       # Anaconda-Umgebungsdatei
 +-- README.md             # Projektbeschreibung
 +-- requirements.txt      # Pip-Paketliste (optional)
+....

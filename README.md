@@ -316,6 +316,7 @@ Lending-Club-Credit-Scoring/
 ├── data/                # Rohdaten, externe Datenquellen
 │   ├── raw/
 │   ├── processed/
+
 │
 ├── notebooks/           # Jupyter Notebooks
 │   ├── 1_data_cleaning.ipynb

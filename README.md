@@ -308,3 +308,27 @@ deactivate
 - Linkedin: https://www.linkedin.com/in/pedro-almeida-ds/
 - Github: https://github.com/allmeidaapedro
 - Gmail: pedrooalmeida.net@gmail.com
+
+
+Lending-Club-Credit-Scoring/
+│
+├── data/                # Rohdaten, externe Datenquellen
+│   ├── raw/
+│   ├── processed/
+│
+├── notebooks/           # Jupyter Notebooks
+│   ├── 1_data_cleaning.ipynb
+│   ├── 2_feature_engineering.ipynb
+│   ├── 3_model_training.ipynb
+│
+├── scripts/             # Python-Skripte (falls du Code auslagerst)
+│   ├── data_cleaning.py
+│   ├── utils.py
+│
+├── outputs/             # Ergebnisse (Modelle, Bilder, Tabellen)
+│   ├── figures/
+│   ├── models/
+│
+├── environment.yml      # Umgebungsdatei für Anaconda
+├── README.md            # Kurze Projektbeschreibung
+└── requirements.txt     # (Optional) Pip-Liste der Pakete

@@ -310,24 +310,24 @@ deactivate
 - Gmail: pedrooalmeida.net@gmail.com
 
 Lending-Club-Credit-Scoring/
-│
-├── data/                 # Rohdaten, externe Datenquellen
-│   ├── raw/             
-│   └── processed/       
-│
-├── notebooks/            # Jupyter Notebooks
-│   ├── 1_data_cleaning.ipynb
-│   ├── 2_feature_engineering.ipynb
-│   └── 3_model_training.ipynb
-│
-├── scripts/              # Python-Skripte (ausgelagerter Code)
-│   ├── data_cleaning.py
-│   └── utils.py
-│
-├── outputs/              # Ergebnisse (Modelle, Bilder, Tabellen)
-│   ├── figures/         
-│   └── models/          
-│
-├── environment.yml       # Anaconda-Umgebungsdatei
-├── README.md             # Projektbeschreibung
-└── requirements.txt      # Pip-Paketliste (optional)
+|
++-- data/                 # Rohdaten, externe Datenquellen
+|   +-- raw/
+|   +-- processed/
+|
++-- notebooks/            # Jupyter Notebooks
+|   +-- 1_data_cleaning.ipynb
+|   +-- 2_feature_engineering.ipynb
+|   +-- 3_model_training.ipynb
+|
++-- scripts/              # Python-Skripte (ausgelagerter Code)
+|   +-- data_cleaning.py
+|   +-- utils.py
+|
++-- outputs/              # Ergebnisse (Modelle, Bilder, Tabellen)
+|   +-- figures/
+|   +-- models/
+|
++-- environment.yml       # Anaconda-Umgebungsdatei
++-- README.md             # Projektbeschreibung
++-- requirements.txt      # Pip-Paketliste (optional)

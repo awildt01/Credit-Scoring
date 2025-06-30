@@ -209,29 +209,29 @@ Die oben genannten Punkte deuten auf ein konservatives Anlageportfolio hin, ohne
      - Die Zielvariable für das LGD-Modell ist die Rückflussquote **(Recovery Rate)**, definiert als Rückflüsse / bewilligte Kreditsumme. Obwohl LGD den nicht rückzahlbaren Antil der Forderung darstellt, modelliert man oft den rückzahlbaren Anteil. Daher gilt: LGD = 1 – Rückflussquote.
      - Die Zielvariable für das EAD-Modell ist der Kreditumwandlungsfaktor (Credit Conversion Factor, CCF), der den ausstehenden Antil der bewilligten Kreditsumme abbildet. Somit gilt: EAD = bewilligte Kreditsumme × CCF.
      - Fast 50% der Rückflussquoten waren Null. Daher wählte ich für LGD einen zweistufigen Ansatz:
-                       . **Logistische Regression:** Vorhersage, ob Rückflussquote > 0 (1) oder = 0 (0) ist.
-                       . **Lineare Regression:** Für Fälle mit vorhergesagtem Wert > 0, Schätzung des konkreten Werts.
+                       1. **Logistische Regression:** Vorhersage, ob Rückflussquote > 0 (1) oder = 0 (0) ist.
+                       2. **Lineare Regression:** Für Fälle mit vorhergesagtem Wert > 0, Schätzung des konkreten Werts.
   - Der Kreditumwandlungsfaktor (CCF) wies eine brauchbare Verteilung auf, weshalb ich eine einfache lineare Regression für EAD wählte.
   - Hinweis: Obwohl LGD/CCF beta-verteilte Variablen (Anteilswerte) sind und Beta-Regression theoretisch passender wäre, erzielte die lineare Regression nahezu identische Ergebnisse. Aufgrund der notwendigen Anpassung von 0/1-Werten bei Beta-Regression (z. B. Ersetzen durch 0.0001/0.9999) blieb ich     aus Pragmatismus bei linearer Regression.
 
 - Beim Preprocessing kam zum Einsatz:
-- **One-Hot-Encoding** für nominale kategoriale Variablen (vorteilhaft für lineare Modelle).
-- **Ordinale Kodierung** für ordinale kategoriale Variablen (erhält Rangfolge, reduziert Dimensionen).
-- **Standard-Skalierung** für ordinale und numerische Variablen (lineare Modelle sind skalenabhängig!).
-- **Fehlende Werte** wurden durch den Median ersetzt (aufgrund stark rechtssteiler Verteilungen).
+    - **One-Hot-Encoding** für nominale kategoriale Variablen (vorteilhaft für lineare Modelle).
+    - **Ordinale Kodierung** für ordinale kategoriale Variablen (erhält Rangfolge, reduziert Dimensionen).
+    - **Standard-Skalierung** für ordinale und numerische Variablen (lineare Modelle sind skalenabhängig!).
+    - **Fehlende Werte** wurden durch den Median ersetzt (aufgrund stark rechtssteiler Verteilungen).
 
 - Ich schätzte die LGD- und EAD-Modelle:
-- Für LGD kombiniere ich beide Stufen:
-Endgültige LGD-Prognose = Prognose Stufe 1 (0/1) × Prognose Stufe 2 (Wert)
-*(Bei "0" aus Stufe 1 bleibt LGD=0; bei "1" wird der Wert aus Stufe 2 übernommen)*.
-- Die Ergebnisse waren zufriedenstellend (wenn auch nicht herausragend):
-- Die Verteilung der Residuen ähnelte einer Normalverteilung (Spitze bei Null), jedoch mit leichten Heavy Tails.
-- Tendenz: Das LGD-Modell unterschätzt leicht die Rückflussquote, das EAD-Modell überschätzt leicht den CCF.
-- Kennzahlen zur Genauigkeit:
-- LGD-Modell: MAE (mittlerer absoluter Fehler) = 0.0523
-→ Abweichung der vorhergesagten Rückflussquote vom Ist-Wert: durchschnittlich 5.23 Prozentpunkte.
-- EAD-Modell: MAE = 0.1353
-→ Abweichung des vorhergesagten CCF vom Ist-Wert: durchschnittlich 13.53 Prozentpunkte.
+    - Für LGD kombiniere ich beide Stufen:
+    Endgültige LGD-Prognose = Prognose Stufe 1 (0/1) × Prognose Stufe 2 (Wert)
+    *(Bei "0" aus Stufe 1 bleibt LGD=0; bei "1" wird der Wert aus Stufe 2 übernommen)*.
+    - Die Ergebnisse waren zufriedenstellend (wenn auch nicht herausragend):
+    - Die Verteilung der Residuen ähnelte einer Normalverteilung (Spitze bei Null), jedoch mit leichten Heavy Tails.
+    - Tendenz: Das LGD-Modell unterschätzt leicht die Rückflussquote, das EAD-Modell überschätzt leicht den CCF.
+    - Kennzahlen zur Genauigkeit:
+    - LGD-Modell: MAE (mittlerer absoluter Fehler) = 0.0523
+    → Abweichung der vorhergesagten Rückflussquote vom Ist-Wert: durchschnittlich 5.23 Prozentpunkte.
+    - EAD-Modell: MAE = 0.1353
+    → Abweichung des vorhergesagten CCF vom Ist-Wert: durchschnittlich 13.53 Prozentpunkte.
 
 Residuenverteilung und Ist- vs. Prognosewerte für das LGD-Modell.
 

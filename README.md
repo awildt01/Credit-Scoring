@@ -265,6 +265,26 @@ Residuals distribution and actual vs predicted values for the EAD Model.
 - Considering the data goes up until 2015, I assumed that the United States has a basic interest rate of 2.15%.
 - As a **financial result**, with our simple credit policy rules, by rejecting just 11% of the loans (including those belonging to the worst risk class, F, and those with an annualized ROI lower than 2.15, the basic US interest rate), both the amount Lending Club expects to lose in its assets and the default rate decreased. Specifically, the **default rate decreased from 6.71% to 5.65%** and the **Expected Loss decreased from 6.91% to 5.77%.** Although these represent **little percentage points** decreasement, when dealing with **thousands of loans** and funded amounts, it represents a **substantial financial gain to Lending Club.** Furthermore, other policies can also be designed, in a more restrictive or free way. This is just a draw to show that our project is worthwile.
 
+- Zur Berechnung des erwarteten Verlusts (Expected Loss, EL) – definiert als Produkt aus Ausfallwahrscheinlichkeit (PD), Ausfallbetrag (EAD) und Verlustquote (LGD) – nutzte ich die Ergebnisse der drei Modelle (PD, EAD, LGD) auf den Testdaten des PD-Modells, die sowohl ausgefallene als auch nicht ausgefallene Kredite umfassen.
+
+- Ich bildete 10 Risikoklassen (AA, A, AB, BB, B, BC, C, CD, DD, F) basierend auf der Ausfallwahrscheinlichkeit. Dies ermöglicht:
+a) Bessere Nutzung der Kreditscoring-Ergebnisse
+b) Unterschiedliche Kreditrichtlinien pro Risikogruppe.
+
+- Vor diesem Hintergrund verfolgt Lending Club eine konservative Ausrichtung mit Fokus auf die Rentabilität seiner Vermögenswerte. Ziel ist die Reduzierung von Risiken bei hochriskanten Krediten bei gleichzeitiger Gewinnmaximierung.
+
+- Die daraus abgeleitete konservative Kreditpolitik des CEO:
+    • Automatische Zusage: Antragsteller der Risikoklassen AA und A (geringstes Risiko/beste Scores)
+    • Automatische Ablehnung: Risikoklasse F (höchstes Risiko/schlechteste Scores)
+    • Konditionelle Zusage: Für alle anderen Klassen nur bei jährlicher Kapitalrendite (ROI) > US-Basiszinssatz. Grund: Kredite mit ROI unter diesem Satz sind weniger attraktiv als festverzinsliche Anlagen.
+
+- Annahme: Basierend auf Daten bis 2015 setzte ich den US-Basiszinssatz auf 2,15%.
+
+- Finanzergebnis: Durch diese einfachen Regeln – Ablehnung von nur 11% der Kredite (Klasse F + ROI < 2,15%) – sanken:
+   • Ausfallquote von 6,71% auf 5,65%
+   • Erwarteter Verlust (EL) von 6,91% auf 5,77%.
+Obwohl dies gering erscheint, führt es bei tausenden Krediten zu einem erheblichen finanziellen Gewinn für Lending Club. Andere Richtlinien (restriktiver/liberaler) sind möglich – dies ist nur ein erster Entwurf zur Machbarkeitsdemonstration.
+
 **7.6 Model Monitoring:**
 - Imagine a year has passed since we built our PD model. Although it is very unlikely, the people applying for loans now might be very different from those we used to train our PD model. We need to reassess if our PD model is working well.
 - If the population of the new applicants is too different from the population we used to build the model, the results may be disastrous. In such cases, we need to redevelop the model.

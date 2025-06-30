@@ -288,12 +288,16 @@ Obwohl dies gering erscheint, führt es bei tausenden Krediten zu einem erheblic
 - Die Kreditscores zeigten einen **PSI von 0.19 (knapp unter 0.25). Dies signalisiert, dass bald ein neues PD-Modell entwickelt werden sollte. Ein solcher Wert bedeutet eine kritische Populationsdrift – die Modellvorhersagen weichen erheblich von historischen Beobachtungen ab**.
 
 **7.7 Next steps:**
-- Considering the 2015 applicants' profile has changed, especially the scores distribution, the next steps involve constructing a new PD Model utilizing more robust methods, such as boosting algorithms, focusing on predictive power and trying to use machine learning interpretability tools such as SHAP and LIME.
-- As a final product, I intend to deploy these models on production environment.
+• Entwicklung eines neuen PD-Modells mit robusteren Methoden (z. B. Boosting-Algorithmen)
+• Fokus auf steigernde Vorhersagekraft
+• Einsatz von ML-Interpretierbarkeitstools wie SHAP und LIME
 
 # 8. Obtain the Data
-- The data was collected from kaggle and contain complete loan data for all loans issued through the 2007-2015, including the current loan status (Current, Late, Fully Paid, etc.) and the latest payment information.
-- https://www.kaggle.com/datasets/wordsforthewise/lending-club
+- Die Daten wurden von Kaggle bezogen und umfassen vollständige Kreditinformationen aller zwischen 2007–2015 vergebenen Darlehen. Dies inkludiert:
+• Aktuellen Kreditstatus (z. B. laufend, verzögert, vollständig zurückgezahlt)
+• Letzte Zahlungsinformationen
+- Datenquelle:
+https://www.kaggle.com/datasets/wordsforthewise/lending-club
 
 # 9. Run this Project on Your Local Machine
 - An important observation is that, due to the large size of the data, it was not possible to push it to GitHub. To replicate the same results, please download the data from the link provided in topic 8 and read it into the data cleaning notebook. The cleaned data is saved in the input directory, so after the data cleaning process, everything should run smoothly.

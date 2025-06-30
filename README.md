@@ -281,7 +281,7 @@ b) Unterschiedliche Kreditrichtlinien pro Risikogruppe.
 - Annahme: Basierend auf Daten bis 2015 setzte ich den US-Basiszinssatz auf 2,15%.
 
 - Finanzergebnis durch diese einfachen Regeln:
-    – Ablehnung von nur 11% der Kredite (Klasse F + ROI < 2,15%) – sanken
+    - Ablehnung von nur 11% der Kredite (Klasse F + ROI < 2,15%)  sanken
     - Ausfallquote von 6,71% auf 5,65%
     - Erwarteter Verlust (EL) von 6,91% auf 5,77%.
 

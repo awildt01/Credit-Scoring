@@ -220,7 +220,7 @@ Die oben genannten Punkte deuten auf ein konservatives Anlageportfolio hin, ohne
     - **Standard-Skalierung** für ordinale und numerische Variablen (lineare Modelle sind skalenabhängig!).
     - **Fehlende Werte** wurden durch den Median ersetzt (aufgrund stark rechtssteiler Verteilungen).
 
-- Ich schätzte die LGD- und EAD-Modelle:
+- die LGD- und EAD-Modelle schätzten:
     - Für LGD kombiniere ich beide Stufen:
     Endgültige LGD-Prognose = Prognose Stufe 1 (0/1) × Prognose Stufe 2 (Wert)
     *(Bei "0" aus Stufe 1 bleibt LGD=0; bei "1" wird der Wert aus Stufe 2 übernommen)*.

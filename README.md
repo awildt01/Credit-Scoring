@@ -194,23 +194,46 @@ Die oben genannten Punkte deuten auf ein konservatives Anlageportfolio hin, ohne
 | Gini   | 0.367310    | 0.406897   |
 | Brier  | 0.100512    | 0.061633   |
 
-- Finally, a **scorecard** was developed, transforming the coefficients from the PD Model into easily interpretable integer values known as scores. Various formulas were employed to compute these scores, with a minimum score of 300 and a maximum of 850. Subsequently, **credit scores** were **calculated for all borrowers** in both the training and test datasets by multiplying each dummy by its scores and summing the intercept.
+- Abschließend wurde eine **Scorecard** entwickelt, indem die Koeffizienten des PD-Modells in leicht interpretierbare ganzzahlige Werte – sogenannte Punkte (Scores) – transformiert wurden. Unter Verwendung verschiedener Formeln wurden diese Scores berechnet, mit einer Mindestpunktzahl von 300 und einer Höchstpunktzahl von 850.
+
+- Anschließend wurden Kreditscores für alle Kreditnehmer in den Trainings- und Testdatensätzen berechnet, indem jede Dummy-Variable mit ihrem zugehörigen Punktwert multipliziert und die Summe aus diesen Produkten plus dem Achsenabschnitt (Intercept) gebildet wurde.
 
 **7.4 EAD and LGD Modeling:**
-- Initially, I **isolated data containing defaulted loans with a "charged off" status**, ensuring sufficient time had passed for potential recoveries.
-- Similar to the PD Model, I excluded irrelevant variables and those that could introduce data leakage.
-- Subsequently, I performed an **out-of-time train-test split**, following the same approach as with the PD Model.
-- Following this, I **investigated both dependent variables:**
-    - The dependent variable for the **LGD Model** is the **recovery rate**, defined as recoveries divided by the funded amount. Although LGD represents the proportion of the total exposure that cannot be recovered by the lender when the borrower defaults, it is common to model the proportion that CAN be recovered. Thus, **LGD** will be equal to **1 minus the Recovery Rate.**
-    - The dependent variable for the **EAD model** is the **credit conversion factor**, representing the proportion of the funded amount outstanding to pay. Therefore, **EAD** equals the **funded amount multiplied by this credit conversion factor.**
-    - Almost **50% of the recovery rates were zero.** Consequently, I opted to **model LGD using a two-stage approach**. First, a logistic regression predicts whether the recovery rate is greater than zero (1) or zero (0). Then, for those predicted as greater than zero, a linear regression estimates its corresponding value.
-    - The credit conversion factor exhibited a reasonable distribution, leading me to decide on estimating a simple linear regression.
-    - An important observation is that, although LGD and EAD are beta-distributed dependent variables, representing rates, and beta regression is more suitable for estimating them, I tested it against Linear Regression, and almost the same result was achieved. Thus, considering the need to treat 0 and 1 values for beta regression (e.g., replacing them with 0.0001 and 0.9999), for simplicity, I proceeded with linear regression.
-- **Data preprocessing** involved one-hot encoding for nominal categorical variables, as linear models benefit from this encoding. For ordinal categorical variables, ordinal encoding was applied to reduce dimensionality and preserve ordering information. Standard scaling was applied to both ordinal encoded and numerical variables since linear models are sensitive to feature scaling. Missing values were imputed with the median due to an extremely right-skewed variable distribution.
-- I estimated the two-stage LGD and EAD Models. For LGD, I combined the two predictions by taking their product. Predictions from the first stage logistic regression that predicted a recovery rate of zero remained zero, while those predicted as one received the estimated value from the second stage linear regression.
-- The **results were satisfactory**, although not impressive. Both models' **residuals distributions resembled a normal curve**, with most values around zero. Additionally, some tails were observed, indicating that the LGD Model tends to underestimate the recovery rate, and the EAD tends to overestimate it. However, with a **Mean Absolute Error (MAE) of 0.0523 and 0.1353** for the LGD and EAD Models, respectively, the models provide useful predictions. On average, the predicted recovery rates deviate by approximately 5.23 percentage points from the actual values. On average, the predicted credit conversion rates deviate by approximately 13.53 percentage points from the actual values.
 
-Residuals distribution and actual vs predicted values for the LGD Model.
+- Zunächst **isolierte ich Daten mit ausgefallenen Krediten (Status "abgeschrieben" / charged off), wobei sichergestellt wurde, dass ausreichend Zeit für mögliche Rückflüsse (recoveries) vergangen war.
+- Analog zum PD-Modell schloss ich irrelevante Variablen sowie Variablen mit Datenleck-Potenzial aus.
+- Anschließend führte ich einen Out-of-time Train-Test-Split durch, identisch zum Vorgehen beim PD-Modell.
+  
+
+- Daraufhin analysierte ich beide Zielvariablen:
+- Die Zielvariable für das LGD-Modell ist die Rückflussquote **(Recovery Rate)**, definiert als Rückflüsse / bewilligte Kreditsumme. Obwohl LGD den nicht rückzahlbaren Antil der Forderung darstellt, modelliert man oft den rückzahlbaren Anteil. Daher gilt: LGD = 1 – Rückflussquote.
+- Die Zielvariable für das EAD-Modell ist der Kreditumwandlungsfaktor (Credit Conversion Factor, CCF), der den ausstehenden Antil der bewilligten Kreditsumme abbildet. Somit gilt: EAD = bewilligte Kreditsumme × CCF.
+- Fast 50% der Rückflussquoten waren Null. Daher wählte ich für LGD einen zweistufigen Ansatz:
+1. **Logistische Regression:** Vorhersage, ob Rückflussquote > 0 (1) oder = 0 (0) ist.
+2. **Lineare Regression:** Für Fälle mit vorhergesagtem Wert > 0, Schätzung des konkreten Werts.
+- Der Kreditumwandlungsfaktor (CCF) wies eine brauchbare Verteilung auf, weshalb ich eine einfache lineare Regression für EAD wählte.
+- Hinweis: Obwohl LGD/CCF beta-verteilte Variablen (Anteilswerte) sind und Beta-Regression theoretisch passender wäre, erzielte die lineare Regression nahezu identische Ergebnisse. Aufgrund der notwendigen Anpassung von 0/1-Werten bei Beta-Regression (z. B. Ersetzen durch 0.0001/0.9999) blieb ich aus Pragmatismus bei linearer Regression.
+
+- Beim Preprocessing kam zum Einsatz:
+- **One-Hot-Encoding** für nominale kategoriale Variablen (vorteilhaft für lineare Modelle).
+- **Ordinale Kodierung** für ordinale kategoriale Variablen (erhält Rangfolge, reduziert Dimensionen).
+- **Standard-Skalierung** für ordinale und numerische Variablen (lineare Modelle sind skalenabhängig!).
+- **Fehlende Werte** wurden durch den Median ersetzt (aufgrund stark rechtssteiler Verteilungen).
+
+- Ich schätzte die LGD- und EAD-Modelle:
+- Für LGD kombiniere ich beide Stufen:
+Endgültige LGD-Prognose = Prognose Stufe 1 (0/1) × Prognose Stufe 2 (Wert)
+*(Bei "0" aus Stufe 1 bleibt LGD=0; bei "1" wird der Wert aus Stufe 2 übernommen)*.
+- Die Ergebnisse waren zufriedenstellend (wenn auch nicht herausragend):
+- Die Verteilung der Residuen ähnelte einer Normalverteilung (Spitze bei Null), jedoch mit leichten Heavy Tails.
+- Tendenz: Das LGD-Modell unterschätzt leicht die Rückflussquote, das EAD-Modell überschätzt leicht den CCF.
+- Kennzahlen zur Genauigkeit:
+- LGD-Modell: MAE (mittlerer absoluter Fehler) = 0.0523
+→ Abweichung der vorhergesagten Rückflussquote vom Ist-Wert: durchschnittlich 5.23 Prozentpunkte.
+- EAD-Modell: MAE = 0.1353
+→ Abweichung des vorhergesagten CCF vom Ist-Wert: durchschnittlich 13.53 Prozentpunkte.
+
+Residuenverteilung und Ist- vs. Prognosewerte für das LGD-Modell.
 
 <img src="reports/residuals_dist_lgd.png">
 

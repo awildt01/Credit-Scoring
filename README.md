@@ -166,18 +166,24 @@ Die oben genannten Punkte deuten auf ein konservatives Anlageportfolio hin, ohne
 - Anschließend führte ich eine zeitliche Aufteilung in Trainings- und **Testdaten (out-of-time train-test split)** durch. Diese Methode gilt als bester Ansatz für PD-, EAD- und LGD-Modelle, da sie entscheidend ist, wenn wir Modelle auf Basis vergangener Daten erstellen, um zukünftige Antragsteller vorherzusagen.
 <img src="reports/out_of_time_split.png">
 
-- Following this, I applied the necessary **preprocessing**, creating the **dummy variables** determined in the EDA step. I discretized the identified continuous features and then grouped all the specified categories to obtain the final dummies, eliminating the respective reference categories. An important observation is that I considered missing values in a variable as another category of it, because they showed a higher proportion of defaults, not being missing values at random.
-- Once the data was preprocessed, I estimated the **PD Model using hypothesis testing to evaluate p-values** for the predictor variables. This helped determine whether these variables were statistically significant (i.e., had a coefficient different from zero) or not.
-- Independent variables with all dummies containing p-values higher than an alpha of 0.05 were removed, simplifying the model.
-- **Interpretation of the coefficients** was performed. For instance, considering the coefficient for sub_grade_A3_A2_A1 as 0.694287, we can infer that the odds of being classified as good for a borrower with A1/A2/A3 subgrades are exp(0.694287) = 2.0 times greater than the odds for someone with G1/G2/G3/G4/G5/F2/F3/F4/F5 subgrades (the reference category).
-- Subsequently, I **evaluated the PD Model** by dividing the **scores** into **deciles** and assessing whether there was **ordering** in them. Indeed, in both the training and test data, there was a clear ordering: the lower the credit risk or the higher the score, the lower the bad rate. Moreover, more than 50% of the bad borrowers were observed up to the third decile/score.
+- **Im Anschluss** wendete ich das notwendige Preprocessing an, indem ich die Dummy-Variablen erstellte, die im EDA-Schritt festgelegt worden waren. Ich diskretisierte die identifizierten kontinuierlichen Merkmale und fasste dann die spezifizierten Kategorien zusammen, um die finalen Dummies zu erhalten. Dabei entfernte ich die jeweiligen Referenzkategorien. Wichtig zu beachten: Fehlende Werte (Missings) behandelte ich als eigenständige Kategorie innerhalb der jeweiligen Variable, da sie eine höhere Ausfallquote aufwiesen und nicht zufällig fehlten (not missing at random).
+
+- Nach dem Preprocessing schätzte ich das PD-Modell unter **Verwendung von Hypothesentests zur Auswertung der p-Werte der Prädiktorvariablen**. Dies diente dazu zu bestimmen, ob diese Variablen statistisch signifikant waren (d. h. einen von Null verschiedenen Koeffizienten aufwiesen) oder nicht.
+
+- **Unabhängige Variablen, bei denen alle zugehörigen Dummy-Variablen p-Werte über einem Alpha von 0,05 aufwiesen**, wurden entfernt, um das Modell zu vereinfachen.
+
+- **Die Interpretation der Koeffizienten wurde durchgeführt***. Beispielsweise lässt sich aus dem Koeffizienten für sub_grade_A3_A2_A1 von 0,694287 ableiten: Die Chance (Odds), als "gut" eingestuft zu werden, ist für einen Kreditnehmer mit den Subgrades A1/A2/A3 exp(0,694287) = 2,0-mal so hoch wie für jemanden mit den Subgrades G1/G2/G3/G4/G5/F2/F3/F4/F5 (der Referenzkategorie).
+
+- Abschließend evaluierte ich das PD-Modell, indem ich die Scores in Dezile einteilte und prüfte, ob eine ordnende Trennung (Ordering) vorlag. Tatsächlich zeigte sich sowohl in den Trainings- als auch in den Testdaten eine klare Ordnung: Je niedriger das Kreditrisiko (bzw. je höher der Score), desto niedriger die Ausfallquote ("Bad Rate"). Zudem befanden sich über 50% der schlechten Kreditnehmer (Bad Borrowers) bereits in den ersten drei Dezilen (bis zum dritten Score-Dezil).
 
 
 <img src="reports/ordering_per_decile.png">
 
 <img src="reports/cum_bad_rate_decile.png">
 
-- Furthermore, with a **KS** of approximately **0.3**, an **ROC-AUC** of around **0.7**, and a **Gini** coefficient of about **0.4** on the test set, the application model exhibits **satisfactory performance**. The model demonstrates effective discriminatory power, distinguishing well between good and bad borrowers. Examining the **Brier** Score, it is very **close to zero**, indicating that the model presents **well-calibrated probabilities** or scores. Furthermore, the **train and test scores** for each of these metrics are quite **similar**. Consequently, the model is not overfitted, has captured the underlying patterns within the data, and is likely to distinguish well between good and bad borrowers in new, unseen data.
+- Darüber hinaus zeigt das Anwendungsmodell mit einem **KS** von etwa **0,3**, einer **ROC-AUC von rund 0,7** und einem **Gini-Koeffizienten von ca. 0,4** auf dem Testset eine zufriedenstellende Performance. Das Modell verfügt über eine effektive Trennschärfe und unterscheidet zuverlässig zwischen guten und schlechten Kreditnehmern.
+- Betrachtet man den **Brier-Score**, liegt dieser sehr nahe bei null, was darauf hindeutet, dass das Modell gut kalibrierte Wahrscheinlichkeiten (Scores) liefert. Zudem sind die Trainings- und Testergebnisse für jede dieser Metriken sehr ähnlich.
+- Folglich liegt kein **Overfitting** vor, das Modell hat die zugrundeliegenden Muster in den Daten erfasst und wird voraussichtlich auch bei neuen, unbekannten Daten gut zwischen guten und schlechten Kreditnehmern unterscheiden können.
 
 <img src="reports/roc_auc.png">
 

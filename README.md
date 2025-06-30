@@ -209,8 +209,8 @@ Die oben genannten Punkte deuten auf ein konservatives Anlageportfolio hin, ohne
      - Die Zielvariable für das LGD-Modell ist die Rückflussquote **(Recovery Rate)**, definiert als Rückflüsse / bewilligte Kreditsumme. Obwohl LGD den nicht rückzahlbaren Antil der Forderung darstellt, modelliert man oft den rückzahlbaren Anteil. Daher gilt: LGD = 1 – Rückflussquote.
      - Die Zielvariable für das EAD-Modell ist der Kreditumwandlungsfaktor (Credit Conversion Factor, CCF), der den ausstehenden Antil der bewilligten Kreditsumme abbildet. Somit gilt: EAD = bewilligte Kreditsumme × CCF.
      - Fast 50% der Rückflussquoten waren Null. Daher wählte ich für LGD einen zweistufigen Ansatz:
-                       - **Logistische Regression:** Vorhersage, ob Rückflussquote > 0 (1) oder = 0 (0) ist.
-                       - **Lineare Regression:** Für Fälle mit vorhergesagtem Wert > 0, Schätzung des konkreten Werts.
+                       . **Logistische Regression:** Vorhersage, ob Rückflussquote > 0 (1) oder = 0 (0) ist.
+                       . **Lineare Regression:** Für Fälle mit vorhergesagtem Wert > 0, Schätzung des konkreten Werts.
   - Der Kreditumwandlungsfaktor (CCF) wies eine brauchbare Verteilung auf, weshalb ich eine einfache lineare Regression für EAD wählte.
   - Hinweis: Obwohl LGD/CCF beta-verteilte Variablen (Anteilswerte) sind und Beta-Regression theoretisch passender wäre, erzielte die lineare Regression nahezu identische Ergebnisse. Aufgrund der notwendigen Anpassung von 0/1-Werten bei Beta-Regression (z. B. Ersetzen durch 0.0001/0.9999) blieb ich     aus Pragmatismus bei linearer Regression.
 

@@ -352,9 +352,9 @@ deactivate
 
 
 # 10. Contact me
-- Linkedin: https://www.linkedin.com/in/pedro-almeida-ds/
-- Github: https://github.com/allmeidaapedro
-- Gmail: pedrooalmeida.net@gmail.com
+- Linkedin: 
+- Github: https://github.com/awildt01/
+- Gmail: awildt01mail.com
 
 ```bash
 

@@ -274,15 +274,15 @@ b) Unterschiedliche Kreditrichtlinien pro Risikogruppe.
 - Vor diesem Hintergrund verfolgt Lending Club eine konservative Ausrichtung mit Fokus auf die Rentabilität seiner Vermögenswerte. Ziel ist die Reduzierung von Risiken bei hochriskanten Krediten bei gleichzeitiger Gewinnmaximierung.
 
 - Die daraus abgeleitete konservative Kreditpolitik des CEO:
-       • Automatische Zusage: Antragsteller der Risikoklassen AA und A (geringstes Risiko/beste Scores)
-       • Automatische Ablehnung: Risikoklasse F (höchstes Risiko/schlechteste Scores)
-       • Konditionelle Zusage: Für alle anderen Klassen nur bei jährlicher Kapitalrendite (ROI) > US-Basiszinssatz. Grund: Kredite mit ROI unter diesem Satz sind weniger attraktiv als festverzinsliche Anlagen.
+       - Automatische Zusage: Antragsteller der Risikoklassen AA und A (geringstes Risiko/beste Scores)
+       - Automatische Ablehnung: Risikoklasse F (höchstes Risiko/schlechteste Scores)
+       - Konditionelle Zusage: Für alle anderen Klassen nur bei jährlicher Kapitalrendite (ROI) > US-Basiszinssatz. Grund: Kredite mit ROI unter diesem Satz sind weniger attraktiv als festverzinsliche Anlagen.
 
 - Annahme: Basierend auf Daten bis 2015 setzte ich den US-Basiszinssatz auf 2,15%.
 
 - Finanzergebnis: Durch diese einfachen Regeln – Ablehnung von nur 11% der Kredite (Klasse F + ROI < 2,15%) – sanken:
-      • Ausfallquote von 6,71% auf 5,65%
-      • Erwarteter Verlust (EL) von 6,91% auf 5,77%.
+      - Ausfallquote von 6,71% auf 5,65%
+      - Erwarteter Verlust (EL) von 6,91% auf 5,77%.
 Obwohl dies gering erscheint, führt es bei tausenden Krediten zu einem erheblichen finanziellen Gewinn für Lending Club. Andere Richtlinien (restriktiver/liberaler) sind möglich – dies ist nur ein erster Entwurf zur Machbarkeitsdemonstration.
 
 **7.6 Model Monitoring:**

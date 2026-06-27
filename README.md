@@ -313,7 +313,7 @@ Once you have this installed, open a terminal on your local machine and run the 
 
 1. Clone the repository:
 <pre>
-git clone https://github.com/allmeidaapedro/Lending-Club-Credit-Scoring.git
+git clone https://github.com/awildt01/Credit-Scoring
 </pre>
 
 2. Navigate to the cloned repository directory:
